@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  appTitle: 'SpaceX Launch Programs',
+  appDeveloper: 'rk-7 (Rushikesh)',
+  apiBase: 'https://api.spacexdata.com/v3'
 };
 
 /*
