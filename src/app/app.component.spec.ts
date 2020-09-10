@@ -3,6 +3,9 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
+  const appTitle = 'SpaceX Launch Programs';
+  const appDeveloper = 'rk-7 (Rushikesh)';
+  const footerText = `Developed by ${appDeveloper}`;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
@@ -20,16 +23,21 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'sturdy-enigma'`, () => {
+  it(`should have as title '${appTitle}'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('sturdy-enigma');
+    expect(app.title).toEqual(appTitle);
+  });
+  it(`should have as developer '${appDeveloper}'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.developer).toEqual(appDeveloper);
   });
 
-  it('should render title', () => {
+  it('should render footer', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('sturdy-enigma app is running!');
+    expect(compiled.querySelector('footer').textContent).toContain(footerText);
   });
 });
