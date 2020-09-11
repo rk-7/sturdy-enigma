@@ -11,8 +11,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatListModule } from '@angular/material/list';
 
 import { SuccessfulPipe } from './pipes/successful.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -35,8 +33,6 @@ import { LaunchCardComponent } from './launch-card/launch-card.component';
     ReactiveFormsModule,
     MatCardModule,
     MatButtonToggleModule,
-    MatDividerModule,
-    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
