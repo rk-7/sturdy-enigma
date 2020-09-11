@@ -26,7 +26,7 @@ export interface OrbitParams {
   inclination_deg?: number;
   period_min?: number;
   lifespan_years?: number;
-  epoch?: Date;
+  epoch?: Date | string;
   mean_motion?: number;
   raan?: number;
   arg_of_pericenter?: number;
@@ -45,12 +45,12 @@ export interface Payload {
   payload_mass_lbs?: number;
   orbit: string;
   orbit_params: OrbitParams;
-  cap_serial: string;
+  cap_serial?: string;
   mass_returned_kg?: number;
   mass_returned_lbs?: number;
   flight_time_sec?: number;
-  cargo_manifest: string;
-  uid: string;
+  cargo_manifest?: string;
+  uid?: string;
 }
 
 export interface SecondStage {
@@ -158,8 +158,8 @@ export interface Launch {
   upcoming: boolean;
   launch_year: string;
   launch_date_unix: number;
-  launch_date_utc: Date;
-  launch_date_local: Date;
+  launch_date_utc: Date | string;
+  launch_date_local: Date | string;
   is_tentative: boolean;
   tentative_max_precision: string;
   tbd: boolean;
@@ -169,18 +169,18 @@ export interface Launch {
   telemetry: Telemetry;
   launch_site: LaunchSite;
   launch_success: boolean;
-  launch_failure_details: LaunchFailureDetails;
+  launch_failure_details?: LaunchFailureDetails;
   links: Links;
   details: string;
-  static_fire_date_utc?: Date;
+  static_fire_date_utc?: Date | string;
   static_fire_date_unix?: number;
   timeline: Timeline;
   crew?: any;
-  last_date_update?: Date;
-  last_ll_launch_date?: Date;
-  last_ll_update?: Date;
-  last_wiki_launch_date?: Date;
-  last_wiki_revision: string;
-  last_wiki_update?: Date;
-  launch_date_source: string;
+  last_date_update?: Date | string;
+  last_ll_launch_date?: Date | string;
+  last_ll_update?: Date | string;
+  last_wiki_launch_date?: Date | string;
+  last_wiki_revision?: string;
+  last_wiki_update?: Date | string;
+  launch_date_source?: string;
 }
