@@ -13,7 +13,8 @@
     "build:ssr": "ng build --prod && ng run sturdy-enigma:server:production",
     "prerender": "ng run sturdy-enigma:prerender",
     "prebuild:ssr": "ngcc",
-    "bundle-report": "ng build --prod --stats-json && webpack-bundle-analyzer dist/sturdy-enigma/browser/stats.json"
+    "bundle-report": "ng build --prod --stats-json && webpack-bundle-analyzer dist/sturdy-enigma/browser/stats.json",
+    "heroku-postbuild": "npm run prerender"
   },
   "private": true,
   "dependencies": {
