@@ -1,1 +1,25 @@
-<p>launches-gallery works!</p>
+<article fxLayout="row" fxLayout.lt-sm="column">
+  <aside
+    fxFlex="0 1 calc(33.3% - 32px)"
+    fxFlex.lt-md="0 1 calc(33.3% - 32px)"
+    fxFlex.lt-sm="100%"
+  >
+  <app-gallery-filter [initialLaunchYear]="initialLaunchYear" (filtersUpdated)="filtersUpdated($event)"></app-gallery-filter>
+</aside>
+  <section
+    class="gallery"
+    fxFlex="grow"
+    fxLayout="row wrap"
+    fxLayout.lt-sm="column"
+    fxLayoutGap="16px grid"
+    fxLayoutAlign="flex-start"
+  >
+    <app-launch-card
+      *ngFor="let launch of $launches | async"
+      fxFlex="1 1 25%"
+      fxFlex.lt-md="1 1 33.3%"
+      fxFlex.lt-sm="100%"
+      [launch]="launch"
+    ></app-launch-card>
+  </section>
+</article>
