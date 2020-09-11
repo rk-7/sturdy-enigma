@@ -1,0 +1,21 @@
+@mixin mix-custom-theme($app-theme) {
+    $primary: map-get($app-theme, primary);
+    $accent: map-get($app-theme, accent);
+  
+    .mat-button-toggle {
+      background-color: mat-color($accent, 500);
+      color: mat-color($accent, default-contrast);
+    }
+  
+    .mat-button-toggle-checked {
+      background-color: mat-color($primary);
+      color: mat-color($primary, default-contrast);
+    }
+    .plain.mat-button-toggle-group {
+      .mat-button-toggle-label-content {
+        padding: 0 5px;
+      }
+      border:none;
+    }
+  }
+  
