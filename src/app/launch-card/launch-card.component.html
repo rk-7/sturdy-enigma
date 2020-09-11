@@ -1,4 +1,4 @@
-<mat-card fxFlex="grow">
+<mat-card fxFlex="grow" launch-card>
 
     <img
       loading="lazy"
@@ -10,8 +10,8 @@
 
   <mat-card-header>
 
-    <mat-card-title>
-      {{ launch.mission_name }} #{{ launch.flight_number }}
+    <mat-card-title mission-name>
+     <h3> {{ launch.mission_name }} #{{ launch.flight_number }}</h3>
     </mat-card-title>
 
   </mat-card-header>
@@ -19,7 +19,9 @@
     <ul mission-summary>
       <li>
         <span class="point-title"> Mission Ids: </span>
-        {{ launch.mission_id?.join(",") }}
+        <ul *ngIf="launch.mission_id && launch.mission_id.length">
+          <li  *ngFor="let missionId of launch.mission_id"> {{ missionId }} </li>
+        </ul>
       </li>
       <li>
         <span class="point-title">Launch Year: </span>

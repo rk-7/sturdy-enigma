@@ -1,10 +1,25 @@
-[mat-card-image] {
-    width: calc(100% - 32px);
-    margin: 20px;
-}
-[mission-summary] {
+[launch-card] {
+  $textValueColor: #48558e;
+  overflow: hidden;
+  overflow-y: scroll;
+  [mat-card-image] {
+    width: calc(100% - 2em);
+    margin: 1em;
+  }
+  [mission-summary] {
     list-style: none;
     .point-title {
-        font-weight: 600;
+      font-weight: 600;
+      color:initial;
     }
+    color: $textValueColor;
+    ul {
+      list-style: initial;
+    }
+    padding: 0px;
+  }
+  [mission-name] {
+    color: $textValueColor;
+    font-weight: 600;
+  }
 }
