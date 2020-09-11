@@ -2,3 +2,9 @@
     width: calc(100% - 32px);
     margin: 20px;
 }
+[mission-summary] {
+    list-style: none;
+    .point-title {
+        font-weight: 600;
+    }
+}
