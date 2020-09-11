@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { LaunchFilter } from '../models/launch-filter';
-import { range } from '../utils/range.generator';
+import { range } from '../utils/range';
 import { Subscription } from 'rxjs';
 
 @Component({
