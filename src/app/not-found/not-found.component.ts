@@ -1,5 +1,5 @@
 import { Response } from 'express';
-import { Component, OnInit, Inject, Optional, PLATFORM_ID } from '@angular/core';
+import { Component, Inject, Optional, PLATFORM_ID } from '@angular/core';
 import { RESPONSE } from '@nguniversal/express-engine/tokens';
 import { isPlatformServer } from '@angular/common';
 @Component({

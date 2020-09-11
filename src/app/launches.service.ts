@@ -11,7 +11,7 @@ import { Launch } from './models/launch-api.model';
 export class LaunchesService {
 
   constructor(private readonly httpClient: HttpClient) { }
-  getLaunches(filters: LaunchFilter)
+  public getLaunches(filters: LaunchFilter)
   : Observable<Launch[]> {
     let params = new HttpParams();
 
