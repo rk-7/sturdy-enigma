@@ -1,9 +1,11 @@
+<section class="page-layout" fxLayout="column" fxLayoutAlign="start center" >
 <header>
   <h1>{{ title }}</h1>
 </header>
-<section page-content>
+<main fxLayout page-content fxLayoutAlign.md="center center">
   <router-outlet></router-outlet>
-</section>
+</main>
 <footer>
   Developed by {{ developer }}
 </footer>
+</section>
