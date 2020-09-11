@@ -1,1 +1,70 @@
-<p>gallery-filter works!</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h2>Filters</h2>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content [formGroup]="filtersForm" fxLayout="column wrap">
+    <h3 filter-title>Launch Year</h3>
+    
+    <mat-button-toggle-group
+    class="plain"
+      formControlName="launch_year"
+      aria-label="Launch Year"
+
+      fxFlex="grow"
+      fxLayout="row wrap"
+
+      fxLayoutAlign="space-around flex-start"
+    >
+      <mat-button-toggle 
+      *ngFor="let year of years" [value]="year"
+      toggle-option
+      fxFlex="1 1 25%"
+      fxFlex.lt-md="1 1 35%"
+      fxFlex.lt-sm="25%"
+
+      >{{ year }}</mat-button-toggle>
+    </mat-button-toggle-group>
+    <h3 filter-title>Launch Success</h3>
+
+    <mat-button-toggle-group
+    class="plain"
+    formControlName="launch_success"
+      aria-label="Launch Success"
+      fxFlex="grow"
+      fxLayout="row wrap"
+
+      fxLayoutAlign="space-around flex-start"
+    >
+      <mat-button-toggle  toggle-option
+      fxFlex="1 1 25%"
+      fxFlex.lt-md="1 1 35%"
+      fxFlex.lt-sm="25%" [value]="true">True</mat-button-toggle>
+      <mat-button-toggle  toggle-option
+      fxFlex="1 1 25%"
+      fxFlex.lt-md="1 1 35%"
+      fxFlex.lt-sm="25%" [value]="false">False</mat-button-toggle>
+    </mat-button-toggle-group>
+    <h3 filter-title>Land Success</h3>
+
+    <mat-button-toggle-group
+    class="plain"
+    formControlName="land_success"
+      aria-label="Land Success"
+      fxFlex="grow"
+      fxLayout="row wrap"
+
+      fxLayoutAlign="space-around flex-start"
+    >
+    <mat-button-toggle  toggle-option
+    fxFlex="1 1 25%"
+    fxFlex.lt-md="1 1 35%"
+    fxFlex.lt-sm="25%" [value]="true">True</mat-button-toggle>
+    <mat-button-toggle  toggle-option
+    fxFlex="1 1 25%"
+    fxFlex.lt-md="1 1 35%"
+    fxFlex.lt-sm="25%" [value]="false">False </mat-button-toggle>
+    </mat-button-toggle-group>
+  </mat-card-content>
+</mat-card>
