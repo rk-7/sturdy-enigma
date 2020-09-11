@@ -1,0 +1,38 @@
+<mat-card fxFlex="grow">
+
+    <img
+      mat-card-image
+      [src]="launch.links.mission_patch_small"
+      alt="Mission patch of the mission {{ launch.mission_name }}"
+    />
+
+  <mat-card-header>
+    <!-- <div mat-card-avatar>
+                
+            </div> -->
+    <mat-card-title
+      >{{ launch.mission_name }} #{{ launch.flight_number }}</mat-card-title
+    >
+    <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+  </mat-card-header>
+  <mat-card-content>
+    <ul mission-summary>
+      <li>
+        <span class="point-title"> Mission Ids: </span>
+        {{ launch.mission_id?.join(",") }}
+      </li>
+      <li>
+        <span class="point-title">Launch Year: </span>
+        {{ launch.launch_year }}
+      </li>
+      <li>
+        <span class="point-title">Successful Launch: </span>
+        {{ launch.launch_success }}
+      </li>
+      <li>
+        <span class="point-title">Successful Landing </span>
+        {{ launch.rocket.first_stage.cores | successful: "land_success" }}
+      </li>
+    </ul>
+  </mat-card-content>
+</mat-card>
