@@ -27,7 +27,7 @@ jobs:
     - name: Build
       run: npm run prerender
     - name: Test
-      run: npm run test -- --watch=false
+      run: npm run test -- --watch=false --browsers=ChromeHeadless
     - name: Deploy
       uses: akhileshns/heroku-deploy@v3.4.6 # This is the action
       with:
