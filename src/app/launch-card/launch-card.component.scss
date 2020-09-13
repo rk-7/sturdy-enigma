@@ -1,10 +1,11 @@
+@import '/src/styles/variables';
 [launch-card] {
-  $textValueColor: #48558e;
   overflow: hidden;
   overflow-y: scroll;
   [mat-card-image] {
     width: calc(100% - 2em);
     margin: 1em;
+    background-color: $bodyBg;
   }
   [mission-summary] {
     list-style: none;
@@ -12,14 +13,14 @@
       font-weight: 600;
       color:initial;
     }
-    color: $textValueColor;
+    color: $textColorSecondary;
     ul {
       list-style: initial;
     }
     padding: 0px;
   }
   [mission-name] {
-    color: $textValueColor;
+    color: $textColorSecondary;
     font-weight: 600;
   }
 }

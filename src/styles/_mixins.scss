@@ -5,6 +5,7 @@
     .mat-button-toggle {
       background-color: mat-color($accent, 500);
       color: mat-color($accent, default-contrast);
+      border-radius: 0.3em;
     }
   
     .mat-button-toggle-checked {
